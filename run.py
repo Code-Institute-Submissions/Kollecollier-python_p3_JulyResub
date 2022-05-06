@@ -9,6 +9,8 @@ if play.lower() != 'yes':
     quit()
 
 print("Okej, Let's play, Select your answer by entering: a, b, or c.")
+score = 0
+
 """
 The if statment determinates if the user want's to play ! If other than yes, game will quit!
 """
@@ -30,6 +32,13 @@ else:
 answer = input("Wha dose CPU stand for? a: central progess unit. b: central processor unit. c: central processing unit. ")
 
 if answer.lower() == "c" :
+    print("Correct!")
+else:
+    print("Incorrect!")
+
+answer = input("What dose SSD stand for? a: solid state drive. b: super state drive. c: super speed drive.")
+
+if answer.lower() == "a" :
     print("Correct!")
 else:
     print("Incorrect!")
