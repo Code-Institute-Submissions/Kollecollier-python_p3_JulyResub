@@ -19,6 +19,7 @@ answer = input("What is 'RAM' short for? a: Random access memory. b: Raid access
 
 if answer.lower() == "a" :
     print("Correct!")
+    score += 1
 else:
     print("Incorrect!")
 
@@ -26,6 +27,7 @@ answer = input("What dose 'GPU' stand for? a: graphic processor unit. b: graphic
 
 if answer.lower() == "b" :
     print("Correct!")
+    score += 1
 else:
     print("Incorrect!")
 
@@ -33,6 +35,7 @@ answer = input("Wha dose CPU stand for? a: central progess unit. b: central proc
 
 if answer.lower() == "c" :
     print("Correct!")
+    score += 1
 else:
     print("Incorrect!")
 
@@ -40,5 +43,8 @@ answer = input("What dose SSD stand for? a: solid state drive. b: super state dr
 
 if answer.lower() == "a" :
     print("Correct!")
+    score += 1
 else:
     print("Incorrect!")
+
+print("You got " + str(score) + " questions right! Well done!")
