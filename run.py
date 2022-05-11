@@ -1,27 +1,36 @@
-#-----------------
+def ask_to_play():
+    print('Welcome to my computer quiz')
+    play = input('Do you want to play? ')
+    if play == "yes":
+        start_game()
+    else:
+        print("To bad maybe next time?")
+        exit()
+
+
 def start_game():
-    
-    guesses = []
-    correct_guesses = 0
-    question_num = 1
-
-    for key in questions:
-        print("----------------------------------")
-        print(key)
-        for i in options[question_num-1]:
-            print(i)
+    print("Okej! Let's play!")
+    start_quiz()
 
 
-questions = {
-    "What is RAM short for?: ": "A",
-    "What is CPU short for?: ": "B",
-    "What is GPU short for?: ": "C",
-    "What is SSD short for? : ": "A"
-}
+def start_quiz():
+    print("First question! ")
+    print("-----------------------")
+    playing = input ("What is RAM short for?\n")
+    if playing == "central processing unit":
+        print("That's correct! Well done 😊")
+    else:
+        print("Incorrect, try again?")
+        play = input("yes or no? ")
+        if play == 'yes':
+            print("----------")
+            restart_quiz()
+            print("-------------")    
 
-options = [["A. Random access memory", "B. Random access motor", "C. Racer access memory"],
-           ["A. Core processor unit", "B. Central processor unit", "C, Core pro unit"],
-           ["A. Great processor unit", "B. Graphics processor unit", "C. Graphic processor unit"],
-           ["A. Solid State Drive", "B. Super State Drive", "C. Solid Super Drive"]]
 
-start_game()
+def restart_quiz():
+    print("Let's try again")
+    start_quiz()
+
+
+ask_to_play()
