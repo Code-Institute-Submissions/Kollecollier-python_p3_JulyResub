@@ -1,3 +1,11 @@
+questions = {
+    "1": "What is RAM short for?",
+    "2": "What is GPU short for?",
+    "3": "What is SSD short for?",
+    "4": "What is PSU short for?"
+}
+
+
 def wrong():
     print("-----------\nSorry that was incorrect😞!\n-----------")
     play = input("Try again?\n")
@@ -21,13 +29,17 @@ def ask_to_play():
 
 
 def start_game():
+    """
+    Giving the user a feedback comment and also engageing the quiz
+    """
     print("-----------------\nOkej! Let's play 😊!\n-----------------")
     start_quiz()
 
 
 def start_quiz():
     print("First question!\n-----------------")
-    play = input('What is RAM short for ?\n').lower()
+    print(questions["1"])
+    play = input('').lower()
     if play == "random access memory":
         print("-----------------\nCorrect! Well done😊!!\n-----------------")
         question_2()
@@ -42,7 +54,8 @@ def restart_quiz():
 
 def question_2():
     print('Okej next question\n-----------------')
-    play = input('What is GPU short for?\n').lower()
+    print(questions["2"])
+    play = input('').lower()
     if play == "graphics processing unit":
         print("-----------------\nCorrect! Well done😊!\n-----------------")
         print("Now on to the next question!\n-----------------")
@@ -52,7 +65,8 @@ def question_2():
 
 
 def question_3():
-    play = input("What is SSD short for?\n").lower()
+    print(questions["3"])
+    play = input("").lower()
     if play == "solid state drive":
         print("-----------------\nCorrect! You're a pro😁!\n-----------------")
         last_question()
@@ -62,7 +76,8 @@ def question_3():
 
 def last_question():
     print("Well done, you made it to the final round☠️\n-----------------")
-    play = input("What is PSU short for?\n").lower()
+    print(questions["4"])
+    play = input("").lower()
     if play == "power supply unit":
         print("-----------------\nCongratz! You are a pro!\n-----------------")
 
