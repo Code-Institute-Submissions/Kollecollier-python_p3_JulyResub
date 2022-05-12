@@ -1,11 +1,9 @@
 def wrong():
-    print("-----------------------")
-    print("Sorry that was incorrect!")
-    print("-----------------------")
+    print("-----------\nSorry that was incorrect😞!\n-----------")
     play = input("Try again?\n")
     if play == 'yes':
-        print("-----------------------")
-        print("Okej you've got this! 😉")
+        print("-----------------\nOkej you've got this😉!\n-----------------")
+        print("Let's try again!\n-----------------")
         start_quiz()
     else:
         print("To bad maybe next time?")
@@ -23,20 +21,16 @@ def ask_to_play():
 
 
 def start_game():
-    print("Okej! Let's play!")
-    print("-----------------------")
+    print("-----------------\nOkej! Let's play 😊!\n-----------------")
     start_quiz()
 
 
 def start_quiz():
-    print("First question! ")
-    print("-----------------------")
-    play = input("What is RAM short for?\n").lower()
+    print("First question!\n-----------------")
+    play = input('What is RAM short for ?\n').lower()
     if play == "random access memory":
-        print("-----------------------")
-        print("That's correct! Well done 😊")
-        print("-----------------------")
-        correct_answer()
+        print("-----------------\nCorrect! Well done😊!!\n-----------------")
+        question_2()
     else:
         wrong()
 
@@ -46,22 +40,35 @@ def restart_quiz():
     start_quiz()
 
 
-def correct_answer():
-    play = input('Okej next question, What is GPU short for?\n').lower()
+def question_2():
+    print('Okej next question\n-----------------')
+    play = input('What is GPU short for?\n').lower()
     if play == "graphics processing unit":
-        print("-----------------------")
-        print("Correct, Good job! 😊 ")
-        print("-----------------------")
-        print("Now let's move on to the next question!")
-        print("-----------------------")
-        play = input("What is SSD short for?\n").lower()
-        if play == 'Solid State Drive':
-            print("-----------------------")
-            print('That is correct! 😊')
-            print("-----------------------")
+        print("-----------------\nCorrect! Well done😊!\n-----------------")
+        print("Now on to the next question!\n-----------------")
+        question_3()
     else:
         wrong()
 
 
+def question_3():
+    play = input("What is SSD short for?\n").lower()
+    if play == "solid state drive":
+        print("-----------------\nCorrect! You're a pro😁!\n-----------------")
+        last_question()
+    else:
+        wrong()
+
+
+def last_question():
+    print("Well done, you made it to the final round☠️\n-----------------")
+    play = input("What is PSU short for?\n").lower()
+    if play == "power supply unit":
+        print("-----------------\nCongratz! You are a pro!\n-----------------")
+
+
+def end_game():
+    print("Thank you for playing my first python quiz game")
+
+
 ask_to_play()
-wrong()
