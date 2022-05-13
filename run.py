@@ -23,6 +23,14 @@ questions = {
 }
 
 
+def add_score():
+    score.update('A1', 'Correct')
+
+
+def wrong_score():
+    score.update('A1', 'Incorrect')
+
+
 def wrong():
     print("-----------\nSorry that was incorrect😞!\n-----------")
     play = input("Try again?\n")
@@ -58,10 +66,12 @@ def start_quiz():
     print(questions["1"])
     play = input('').lower()
     if play == "random access memory":
+        add_score()
         print("-----------------\nCorrect! Well done😊!!\n-----------------")
         question_2()
     else:
         wrong()
+        wrong_score()
 
 
 def restart_quiz():
