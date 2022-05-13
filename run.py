@@ -12,35 +12,51 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('python_project_sheet')
 
-score = SHEET.worksheet('store_correct1')
+score_sheet = SHEET.worksheet('store_correct1')
 
 
-questions = {
-    "1": "What is RAM short for?",
-    "2": "What is GPU short for?",
-    "3": "What is SSD short for?",
-    "4": "What is PSU short for?"
-}
-
-
-def add_score():
-    score.update('A1', 'Correct')
-
-
-def wrong_score():
-    score.update('A1', 'Incorrect')
-
-
-def wrong():
-    print("-----------\nSorry that was incorrect😞!\n-----------")
-    play = input("Try again?\n")
-    if play == 'yes':
-        print("-----------------\nOkej you've got this😉!\n-----------------")
-        print("Let's try again!\n-----------------")
-        start_quiz()
-    else:
-        print("To bad maybe next time?")
-        exit()
+questions = [
+    {
+        "question": "What is RAM short for?",
+        "options": [
+            "a) Random Memory",
+            "b) Random Access",
+            "c) Random Access Memory",
+            "d) Access Memory"
+        ],
+        "correct_answer": "c"
+    },
+    {
+        "question": "What is GPU short for?",
+        "options": [
+            "a) Graphical Processing Unit",
+            "b) Random Access",
+            "c) Random Access Memory",
+            "d) Access Memory"
+            ],
+        "correct_answer": "a"
+    },
+    {
+        "question": "What is SSD short for?",
+        "options": [
+            "a) Random Memory",
+            "b) Solid State Drive",
+            "c) Random Access Memory",
+            "d) Access Memory"
+            ],
+        "correct_answer": "b"
+    },
+    {
+        "question": "What is PSU short for?",
+        "options": [
+            "a) Random Memory",
+            "b) Random Access",
+            "c) Random Access Memory",
+            "d) Power Supply Unit"
+            ],
+        "correct_answer": "d"
+    }
+]
 
 
 def ask_to_play():
@@ -57,60 +73,36 @@ def start_game():
     """
     Giving the user a feedback comment and also engageing the quiz
     """
+    user_name = input("Please enter your name:")
     print("-----------------\nOkej! Let's play 😊!\n-----------------")
-    start_quiz()
+    start_quiz(user_name)
 
 
-def start_quiz():
-    print("First question!\n-----------------")
-    print(questions["1"])
-    play = input('').lower()
-    if play == "random access memory":
-        add_score()
-        print("-----------------\nCorrect! Well done😊!!\n-----------------")
-        question_2()
-    else:
-        wrong()
-        wrong_score()
+def update_score_to_sheet(score, user_name):
+    no_of_rows = len(score_sheet.col_values(1))
+    score_sheet.update_cell(no_of_rows+1, 1, user_name)
+    score_sheet.update_cell(no_of_rows+1, 2, score)
 
 
-def restart_quiz():
-    print("Let's try again")
-    start_quiz()
+def start_quiz(user_name):
+    score = 0
 
-
-def question_2():
-    print('Okej next question\n-----------------')
-    print(questions["2"])
-    play = input('').lower()
-    if play == "graphics processing unit":
-        print("-----------------\nCorrect! Well done😊!\n-----------------")
-        print("Now on to the next question!\n-----------------")
-        question_3()
-    else:
-        wrong()
-
-
-def question_3():
-    print(questions["3"])
-    play = input("").lower()
-    if play == "solid state drive":
-        print("-----------------\nCorrect! You're a pro😁!\n-----------------")
-        last_question()
-    else:
-        wrong()
-
-
-def last_question():
-    print("Well done, you made it to the final round☠️\n-----------------")
-    print(questions["4"])
-    play = input("").lower()
-    if play == "power supply unit":
-        print("-----------------\nCongratz! You are a pro!\n-----------------")
+    for question in questions:
+        print(question["question"])
+        question_options = question["options"]
+        for option in question_options:
+            print(option)
+        user_choice = input('Enter either a/b/c/d:\n').lower()
+        if user_choice == question["correct_answer"]:
+            score += 1
+            print("-----------------\nCorrect! Well done😊!!\n----------------")
+        else:
+            print("-----------------\Sorry its wrong!!\n-----------------")
+    update_score_to_sheet(score, user_name)
 
 
 def end_game():
     print("Thank you for playing my first python quiz game")
 
 
-ask_to_play() 
+ask_to_play()
