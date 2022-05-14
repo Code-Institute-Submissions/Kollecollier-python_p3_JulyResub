@@ -3,8 +3,9 @@ Python computer quiz is a python based that runs in Code Institute's terminal ca
 
 User's are provided with a series of basic PC components questions to answer.
 
-[You can find the live version here.](add heroku link)
-![This is an image](add display img here)
+[You can find the live version here](https://pythonport.herokuapp.com/)
+
+![This is an image](/assets/img/multimock.png)
 
 
 
@@ -18,20 +19,33 @@ In this version the player get's to enter his/her name that will be printed out 
  - ## Existing Features
    
   - Feature 1, Welcome's the user to the quiz ans ask's for a user input if the user wishe's to play!
+
     ![This is an image](/assets/img/ft1.png)
+
   ---
    - Feature 2, Gives the user a feedback input asking for the username!
+
    ![This is an image](/assets/img/ft2yes.png)
+
   ---
+
   - Feature 3, The progam send a reply to the "no" input and print's a messege and then quits.
+
   ![This is an image](/assets/img/ft3no.png)
+
   ---
+
   - Feature 4, The layout of the game is as in the following image, all questions are in a for loop.
+
   ![This is an image](/assets/img/ft4letsplay.png)
+
   ---
+
   - Feature 5, The program makes a "correct" print statment upon correct user input!
   ![This is an image](assets/img/ft5welldone.png)
+
   ---
+  
 - Feature 6, If the user input is incorrect it makes a print statment
 
 ![This is an image](/assets/img/ft6wrong.png)
@@ -53,7 +67,9 @@ In this version the player get's to enter his/her name that will be printed out 
 
 # Testing
  - ### [PEP8 validator](http://pep8online.com/):
+
    - The results below as shown is the result from the pep8 validator:
+   
    ![This is an image](/assets/img/pep8val.png)
 
   - ## Manuall testing:
@@ -73,16 +89,20 @@ In this version the player get's to enter his/her name that will be printed out 
     ---
     ## Used language:
       - Python
-      
+      ---
+ 
  # Bugs
+  - Other than the bugs stated in manual testing no more bugs were issued
+## Remaining bugs
+  - At this point there are no remaining bugs
+---
 
  # Deployment
 
- # Credits
- - Code
+ - This project was deployed via github's terminal to heroku using the git push heroku main code. There was some issues uploading the code to heroku due to some internal error but it has been resolved and uploaded
 
- - # Content
+  - The code can be found on github [Here](https://github.com/Kollecollier/Pyhton_portfolio3)!
 
-   - # General
-
-   - # Contactyes
+ # Credits & Content
+ - Emoji's used come from [Emojipedia](https://emojipedia.org/)
+ - [Code Institue](https://codeinstitute.net/se/) for deployment

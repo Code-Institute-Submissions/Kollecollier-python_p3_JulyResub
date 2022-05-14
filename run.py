@@ -70,7 +70,6 @@ def ask_to_play():
         start_game()
     else:
         print("To bad maybe next time?")
-        exit()
 
 
 def start_game():
