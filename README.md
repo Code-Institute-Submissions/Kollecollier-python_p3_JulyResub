@@ -58,7 +58,9 @@ In this version the player get's to enter his/her name that will be printed out 
   ---
   [Find your score here!](https://docs.google.com/spreadsheets/d/1GGLH-pgg8WNgVzy9pfpcduKy-JZNHxvIZTF92gPKmI0/edit#gid=1089875769)
 
-
+- ## Improvments
+    - Improved code so it no longer accepts empty string
+    - Opened googlesheet access
 
 - ## Future Features
     - Code a better score system for the player.
