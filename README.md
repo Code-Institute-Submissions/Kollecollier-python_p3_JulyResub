@@ -20,40 +20,38 @@ In this version the player get's to enter his/her name that will be printed out 
    
   - Feature 1, Welcome's the user to the quiz ans ask's for a user input if the user wishe's to play!
 
-    ![This is an image](/assets/img/ft1.png)
+    ![This is an image](/assets/img/1.png)
+
+    If u enter an invalid input:  
+
+    ![This is an image](/assets/img/2.png)
 
   ---
    - Feature 2, Gives the user a feedback input asking for the username!
 
-   ![This is an image](/assets/img/ft2yes.png)
+   ![This is an image](/assets/img/3.png)
 
   ---
 
-  - Feature 3, The progam send a reply to the "no" input and print's a messege and then quits.
+  - Feature 3, If nothing is inserted:
 
-  ![This is an image](/assets/img/ft3no.png)
+  ![This is an image](/assets/img/4.png)
 
   ---
 
   - Feature 4, The layout of the game is as in the following image, all questions are in a for loop.
 
-  ![This is an image](/assets/img/ft4letsplay.png)
+  ![This is an image](/assets/img/5.png)
 
-  ---
-
-  - Feature 5, The program makes a "correct" print statment upon correct user input!
-  ![This is an image](assets/img/ft5welldone.png)
-
-  ---
   
-- Feature 6, If the user input is incorrect it makes a print statment
+- Feature 5, If the user input is incorrect it makes a print statment
 
-![This is an image](/assets/img/ft6wrong.png)
+![This is an image](/assets/img/6.png)
 
 ---
   - Feature 7, Upon completion of the quiz a thank you statment is printed and also privodes information about score added to the scoreboard.
 
-  ![This is an image](/assets/img/ft7done.png)
+  ![This is an image](/assets/img/7.png)
 
   ---
   [Find your score here!](https://docs.google.com/spreadsheets/d/1GGLH-pgg8WNgVzy9pfpcduKy-JZNHxvIZTF92gPKmI0/edit#gid=1089875769)
@@ -106,5 +104,4 @@ In this version the player get's to enter his/her name that will be printed out 
   - The code can be found on github [Here](https://github.com/Kollecollier/Pyhton_portfolio3)!
 
  # Credits & Content
- - Emoji's used come from [Emojipedia](https://emojipedia.org/)
  - [Code Institue](https://codeinstitute.net/se/) for deployment
